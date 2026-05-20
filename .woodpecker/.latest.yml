@@ -1,0 +1,14 @@
+steps:
+  build-latest:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      repo: "${CI_REPO_OWNER##mu-}/${CI_REPO_NAME}"
+      tags: latest
+      platforms: linux/amd64, linux/arm64
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+when:
+  - event: push
+    branch: [master]
