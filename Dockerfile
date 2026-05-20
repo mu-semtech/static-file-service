@@ -1,4 +1,4 @@
-FROM nginx:1.19.6
+FROM nginx:1.31
 
 LABEL maintainer="erika.pauwels@gmail.com"
 
