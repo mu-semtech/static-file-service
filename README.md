@@ -7,7 +7,7 @@ Add the following snippet to your `docker-compose.yml` to include the static fil
 
 ```yaml
 static-file:
-  image: semtech/static-file-service:0.3.0
+  image: semtech/static-file-service:0.3.1
   volumes:
     - ./data/static-files:/data
 ```
@@ -36,7 +36,7 @@ RUN npm install
 COPY . .
 RUN ember build -prod
 
-FROM semtech/static-file-service:0.3.0
+FROM semtech/static-file-service:0.3.1
 
 COPY --from=builder /app/dist /data
 ```
