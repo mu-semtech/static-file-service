@@ -14,4 +14,4 @@ then
     done <<< "$ENV_VARIABLES"
 fi
 
-nginx -g "daemon off;"
+exec nginx -g "daemon off;"
